@@ -1,0 +1,132 @@
+<div class="grid grid-nogutter layout-container">
+
+  <div class="col-fixed" style="width:180px">
+    <app-widget-bar></app-widget-bar>
+  </div>
+
+  <div class="col grid-nogutter template-container">
+
+    <div class="col-12  template-banner">
+      <i class="pi pi-play" style="font-size: 2rem"></i>
+    </div>
+
+    <div class="col-12">
+      <!-- <app-template-designer></app-template-designer> -->
+      <div class="col grid middle-container">
+
+        <div class="col-fixed " [ngStyle]="{'width':'100%','zoom':slider+'%'}">
+          <p-card>
+
+
+              <div class="example-container">
+
+                <div
+                *ngIf="done"
+                id="even"
+
+                  cdkDropList
+                  [cdkDropListData]="done"
+                  cdkDropListConnectedTo="all"
+
+                  class="example-list widgetTemplate"
+                  (cdkDropListDropped)="drop($event)"
+                  [cdkDropListEnterPredicate]="evenPredicate"
+                  >
+                  <div class="grid">
+                    <div class="example-box  col-{{item?.size?.col}} md:col-{{item?.size?.md}}" *ngFor="let item of done" cdkDrag>
+                      <app-widget [widget]="item" class=""></app-widget>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+
+
+          </p-card>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="col-12 grid grid-nogutter footer-bar">
+      <div style="width:180px" class="slider-container">
+        <span>{{slider}}</span>
+        <p-slider [(ngModel)]="slider" [min]="20" [max]="200"></p-slider>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-fixed" style="width:180px">
+    <app-widget-bar></app-widget-bar>
+  </div>
+
+  <!-- <div class="col-fixed sidebar grid" style="width:170px">
+
+    <div
+      id="all"
+      cdkDropList
+      [cdkDropListData]="widgets"
+      cdkDropListConnectedTo="even"
+      class="example-list grid"
+      (cdkDropListDropped)="drop($event)"
+      [cdkDropListEnterPredicate]="noReturnPredicate"
+    >
+    <div class="example-box col-4" *ngFor="let item of widgets" cdkDrag>
+      <i class="pi pi-desktop" style="font-size: 2rem"></i>
+      <span>{{item.type}}</span>
+    </div>
+  </div>
+
+
+
+
+  </div> -->
+
+  <!-- <div class="col grid middle-container">
+
+    <div class="col-fixed " [ngStyle]="{'width':'100%','zoom':slider+'%'}">
+      <p-card>
+
+
+          <div class="example-container">
+
+            <div
+            *ngIf="done"
+            id="even"
+
+              cdkDropList
+              [cdkDropListData]="done"
+              cdkDropListConnectedTo="all"
+
+              class="example-list widgetTemplate"
+              (cdkDropListDropped)="drop($event)"
+              [cdkDropListEnterPredicate]="evenPredicate"
+              >
+              <div class="grid">
+                <div class="example-box  col-{{item?.size?.col}} md:col-{{item?.size?.md}}" *ngFor="let item of done" cdkDrag>
+                  <app-widget [widget]="item" class=""></app-widget>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+
+      </p-card>
+    </div>
+
+
+
+    <div class="col-1 text-right slider-container">
+      <p-slider [(ngModel)]="slider" [min]="20" [max]="200"></p-slider>
+    </div>
+  </div> -->
+
+  <!-- <div class="col-fixed sidebar" style="width:170px">
+  Fixed
+  </div> -->
+
+</div>

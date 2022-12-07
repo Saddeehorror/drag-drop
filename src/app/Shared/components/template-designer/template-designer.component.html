@@ -1,0 +1,47 @@
+<div class="grid grid-nogutter main-container">
+
+    <div class="col grid middle-container">
+
+    <div class="col-fixed " [ngStyle]="{'width':'100%','zoom':slider+'%'}">
+      <p-card>
+
+
+          <div class="example-container">
+
+            <div
+            *ngIf="done"
+            id="even"
+
+              cdkDropList
+              [cdkDropListData]="done"
+              cdkDropListConnectedTo="all"
+
+              class="example-list widgetTemplate"
+              (cdkDropListDropped)="drop($event)"
+              [cdkDropListEnterPredicate]="evenPredicate"
+              >
+              <div class="grid">
+                <div class="example-box  col-{{item?.size?.col}} md:col-{{item?.size?.md}}" *ngFor="let item of done" cdkDrag>
+                  <app-widget [widget]="item" class=""></app-widget>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+
+      </p-card>
+    </div>
+
+
+
+    <div class="col-1 text-right slider-container">
+      <!-- <p-slider [(ngModel)]="slider" [min]="20" [max]="200"></p-slider> -->
+    </div>
+  </div>
+
+
+</div>
+
+

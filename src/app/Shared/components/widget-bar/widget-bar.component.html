@@ -1,0 +1,18 @@
+  <div class="grid grid-nogutter col-12 sidebar">
+
+    <div
+      id="all"
+      cdkDropList
+      [cdkDropListData]="widgets"
+      cdkDropListConnectedTo="even"
+      class="example-list grid"
+      (cdkDropListDropped)="drop($event)"
+      [cdkDropListEnterPredicate]="noReturnPredicate"
+    >
+    <div class="example-box col-4" *ngFor="let item of widgets" cdkDrag>
+      <i class="pi pi-desktop" style="font-size: 2rem"></i>
+      <span>{{item.type}}</span>
+    </div>
+  </div>
+
+  </div>
