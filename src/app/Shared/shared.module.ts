@@ -4,6 +4,8 @@ import { WidgetBarComponent } from './components/widget-bar/widget-bar.component
 import { PrimengImportModule } from './modules/primeng-import/primeng-import.module';
 import { TemplateDesignerComponent } from './components/template-designer/template-designer.component';
 import { WidgetComponent } from './components/widget/widget.component';
+import { FormsModule } from '@angular/forms';
+import { RightSidebarComponent } from './components/right-sidebar/right-sidebar.component';
 
 
 
@@ -11,17 +13,21 @@ import { WidgetComponent } from './components/widget/widget.component';
   declarations: [
     WidgetBarComponent,
     TemplateDesignerComponent,
-    WidgetComponent
+    WidgetComponent,
+    RightSidebarComponent
   ],
   imports: [
     PrimengImportModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     PrimengImportModule,
     WidgetBarComponent,
     TemplateDesignerComponent,
-    WidgetComponent
+    WidgetComponent,
+    FormsModule,
+    RightSidebarComponent
   ]
 })
 export class SharedModule { }

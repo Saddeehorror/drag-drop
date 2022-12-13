@@ -1,0 +1,27 @@
+.main-sidebar-container{
+
+}
+.action-bar{
+  height: 50px;
+  background-color: #1B1B1B;
+  color: #FFF;
+}
+
+.content{
+  padding: 10px;
+}
+.widget-tree,.widget-properties{
+  background-color: #A1A1A1;
+  height: calc((100vh - 70vh) - 40px);
+  border-radius: 5px;
+}
+.widget-properties{
+  margin-top: 10px;
+  height: calc((100vh - 30vh) - 40px);
+}
+.properties-header{
+  font-size: 2em;
+  color: #FFF;
+  font-weight: 700;
+  margin: 5px;
+}

@@ -8,10 +8,9 @@ import {CdkDrag, CdkDragDrop, copyArrayItem, moveItemInArray, transferArrayItem}
 })
 export class ViewComponent implements OnInit {
   slider:number = 100;
+  done:any[] = [];
+  currentFocus:any = null;
 
-
-
-  done:any[] = [{type:""}];
 
 
   constructor() { }
@@ -20,7 +19,7 @@ export class ViewComponent implements OnInit {
   }
 
   drop(event: CdkDragDrop<any[]>) {
-    console.log(event);
+    console.log("CALLO----------------->",event);
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {
@@ -32,7 +31,8 @@ export class ViewComponent implements OnInit {
       );
     }
 
-    console.log(this.done);
+    console.log('done',this.done);
+    this.currentFocus = null;
   }
 
   evenPredicate(item: CdkDrag<number>) {
@@ -43,5 +43,10 @@ export class ViewComponent implements OnInit {
 
   noReturnPredicate() {
     return false;
+  }
+
+  widgetFocus(index:number){
+    console.log('index',index);
+    this.currentFocus = index;
   }
 }

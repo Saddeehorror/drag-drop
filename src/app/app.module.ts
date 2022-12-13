@@ -16,7 +16,8 @@ import { PrimengImportModule } from './Shared/modules/primeng-import/primeng-imp
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    PrimengImportModule
+    PrimengImportModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

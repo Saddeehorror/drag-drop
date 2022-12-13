@@ -3,11 +3,12 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-widget',
   templateUrl: './widget.component.html',
-  styleUrls: ['./widget.component.css']
+  styleUrls: ['./widget.component.scss']
 })
 export class WidgetComponent implements OnInit {
 
-  @Input() widget:any
+  @Input() widget:any;
+
   products:any[]
   value=10;
   constructor() {

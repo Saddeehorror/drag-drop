@@ -39,40 +39,10 @@ span{
   margin-right: 90px;
 }
 
-/* .layout-container{
-  background-color: #424242;
-  height: 100vh;
-}
-
-.sidebar{
-  background-color: #1b1b1b;
-}
-
-.template-container{
-  background-color: #FFFF;
-  zoom: 50% !important;
-
-}
-
 .widgetTemplate{
-  min-height: 1em;
+  min-height: 100px;
+  /* background-color: red; */
 }
-
-.example-box i{
-  color: #FFFF;
+.focus{
+  border: 3px dashed #7c9dff;
 }
-.example-box span{
-  color: #FFFF;
-}
-
-.middle-container{
-  height: 100vh;
-  position: relative;
-}
-
-.slider-container{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: red;
-} */

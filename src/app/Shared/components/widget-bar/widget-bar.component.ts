@@ -8,10 +8,12 @@ import { Component } from '@angular/core';
 })
 export class WidgetBarComponent {
   widgets:any[] = [
-    {type:"card",size:{col:12,md:5}},
-    {type:"card-header",size:{col:12,md:7}},
-    {type:"table",size:{col:12,md:12}},
-    {type:"knob",size:{col:12,md:3}}
+    {type:"card",tag:'Tarjeta',config:{size:{col:12,md:5}}},
+    {type:"card-header",tag:'Tarjeta con cabecera',config:{size:{col:12,md:7}}},
+    {type:"table",tag:'Tabla',config:{size:{col:12,md:12}}},
+    {type:"knob",tag:'Perilla',config:{size:{col:12,md:3},value:10}},
+    {type:"knob",tag:'Perilla',config:{size:{col:12,md:3},value:20}}
+
   ]
 
 

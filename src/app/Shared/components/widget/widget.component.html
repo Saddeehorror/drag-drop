@@ -1,22 +1,7 @@
-  <!-- <div class="col-5" *ngIf="widget.type === 'card'">
-    <p-card>
-      Content
-    </p-card>
-  </div> -->
 
-  <!-- <div class="col-5" *ngIf="widget.type === 'card-header'">
-    <p-card>
-      <ng-template pTemplate="header">
-          Header content here
-      </ng-template>
-      Body Content
-      <ng-template pTemplate="footer">
-          Footer content here
-      </ng-template>
-  </p-card>
-  </div> -->
 
   <ng-container *ngIf="widget.type === 'card'">
+    <!-- {{widget | json}} -->
     <p-card>
       Content
     </p-card>
@@ -56,6 +41,6 @@
   </ng-container>
 
   <ng-container *ngIf="widget.type === 'knob'">
-    <!-- <p-knob [(ngModel)]="value" [min]="-50" [max]="50" [readonly]="true"></p-knob> -->
+    <p-knob [(ngModel)]="widget.config.value" [min]="-50" [max]="50" [readonly]="true"></p-knob>
 
   </ng-container>

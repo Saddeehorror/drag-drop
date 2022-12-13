@@ -34,6 +34,7 @@ import {OrderListModule} from 'primeng/orderlist';
 import {SidebarModule} from 'primeng/sidebar';
 import {SliderModule} from 'primeng/slider';
 import {KnobModule} from 'primeng/knob';
+import {TreeModule} from 'primeng/tree';
 
 @NgModule({
   declarations: [],
@@ -73,7 +74,9 @@ import {KnobModule} from 'primeng/knob';
     OrderListModule,
     SidebarModule,
     SliderModule,
-    KnobModule
+    KnobModule,
+    TreeModule,
+    ScrollPanelModule
   ]
 })
 export class PrimengImportModule { }
