@@ -25,3 +25,10 @@
   font-weight: 700;
   margin: 5px;
 }
+
+:host::ng-deep{
+
+.p-tabview .p-tabview-nav li{
+  width: 100%;
+}
+}
